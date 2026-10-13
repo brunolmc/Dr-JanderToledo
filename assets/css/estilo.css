@@ -196,8 +196,8 @@ nav.menu a:hover::after,nav.menu a.ativo::after{transform:scaleX(1)}
 @media (max-width:600px){.cartoes{grid-template-columns:1fr}}
 .cartao{position:relative;background:var(--branco);border:1px solid var(--linha);border-radius:var(--raio-md);padding:28px 26px 16px;display:flex;flex-direction:column;gap:12px;transition:box-shadow .25s,transform .25s,border-color .25s;min-width:0}
 .cartao:hover{box-shadow:var(--sombra);transform:translateY(-3px);border-color:#CBC2B4}
-.cartao .ic{width:52px;height:52px;border-radius:50%;background:var(--nevoa);display:grid;place-items:center;color:var(--verde-serra);margin-bottom:6px}
-.cartao .ic svg{width:28px;height:28px}
+.cartao .ic{width:76px;height:76px;border-radius:50%;background:var(--nevoa);display:grid;place-items:center;color:var(--verde-serra);margin-bottom:6px}
+.cartao .ic svg{width:50px;height:50px}
 .cartao p{color:var(--grafite-verde);flex:1}
 .cartao .link-seta::before{content:"";position:absolute;inset:0;border-radius:var(--raio-md)}
 .nota-secao{margin-top:22px;display:flex;gap:12px;align-items:flex-start;color:var(--grafite-verde)}
@@ -329,12 +329,13 @@ nav.menu a:hover::after,nav.menu a.ativo::after{transform:scaleX(1)}
 .artigo{position:relative;display:flex;flex-direction:column;background:var(--branco);border:1px solid var(--linha);border-radius:var(--raio-md);overflow:hidden;transition:box-shadow .25s,transform .25s;min-width:0}
 .artigo:hover{box-shadow:var(--sombra);transform:translateY(-3px)}
 .artigo .capa{height:168px;position:relative;overflow:hidden}
-.artigo .capa svg{position:absolute;inset:0;width:100%;height:100%}
+.artigo .capa > svg{position:absolute;inset:0;width:100%;height:100%}
 .artigo:nth-child(1) .capa{background:var(--verde-serra)}
 .artigo:nth-child(2) .capa{background:var(--nevoa)}
 .artigo:nth-child(3) .capa{background:#E9E4DA}
 .artigo .corpo{padding:24px 24px 8px;display:grid;gap:12px;flex:1;align-content:start}
-.rotulo .leitura{margin-left:auto;letter-spacing:.04em;text-transform:none;font-weight:500;color:var(--grafite-verde)}
+.artigo .leitura{font-size:14px;color:var(--grafite-verde);display:flex;align-items:center;gap:6px}
+.artigo .leitura::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--salvia)}
 .artigo .corpo p.resumo{color:var(--grafite-verde);font-size:16px}
 .artigo .link-seta{margin:0 24px 14px}
 .artigo .link-seta::before{content:"";position:absolute;inset:0}

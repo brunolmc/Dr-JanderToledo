@@ -136,3 +136,4 @@ A partir daí, toda alteração enviada ao GitHub é publicada automaticamente n
 
 - Mapa: dados © colaboradores do OpenStreetMap (licença ODbL), exibidos com Leaflet 1.9.4 (licença BSD-2).
 - Fontes: Lora e Inter, via Google Fonts (licença SIL Open Font).
+- Ícones médicos: Healthicons (healthicons.org, licença MIT), aplicados no Verde Serra. Os ícones de hérnia de hiato e refluxo foram compostos a partir do ícone de estômago.

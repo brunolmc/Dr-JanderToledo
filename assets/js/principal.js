@@ -77,12 +77,15 @@
     ligarWhats(pConteudo);
     pConteudo.scrollTop = 0;
     if (typeof painel.showModal === "function") painel.showModal(); else painel.setAttribute("open","");
+    /* sempre abrir no início do texto, mesmo depois de rolar um painel anterior */
+    pConteudo.scrollTop = 0;
+    requestAnimationFrame(function(){ pConteudo.scrollTop = 0; pFechar.focus({preventScroll:true}); });
     document.body.style.overflow = "hidden";
   }
   function fechaPainel(){
     if (painel.open){ if (typeof painel.close === "function") painel.close(); else painel.removeAttribute("open"); }
   }
-  painel.addEventListener("close", function(){ document.body.style.overflow = ""; if (origem) origem.focus(); });
+  painel.addEventListener("close", function(){ pConteudo.scrollTop = 0; document.body.style.overflow = ""; if (origem) origem.focus(); });
   pFechar.addEventListener("click", fechaPainel);
   painel.addEventListener("click", function(e){
     if (e.target === painel || e.target.closest("[data-fechar-painel]")) fechaPainel();
