@@ -1,0 +1,13 @@
+{
+  "name": "Dr. Jander Toledo",
+  "short_name": "Dr. Jander",
+  "lang": "pt-BR",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#F2EDE6",
+  "theme_color": "#1F4842",
+  "icons": [
+    { "src": "assets/img/icones/favicon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/img/icones/favicon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

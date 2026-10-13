@@ -1,0 +1,7 @@
+# Versão de revisão: o site não deve aparecer no Google até a aprovação final.
+# Na publicação definitiva, trocar por:
+#   User-agent: *
+#   Allow: /
+#   Sitemap: https://www.drjandertoledo.com.br/sitemap.xml
+User-agent: *
+Disallow: /
