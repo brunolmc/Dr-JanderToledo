@@ -1,6 +1,6 @@
 # Site | Dr. Jander Toledo Ferreira
 
-Landing page do Dr. Jander Toledo Ferreira, MÉDICO, CRM-MG 19.515, Cirurgia Geral (RQE 48.711) e Cirurgia do Aparelho Digestivo, em Belo Horizonte.
+Landing page do Dr. Jander Toledo Ferreira, MÉDICO, CRM-MG 19.515, Cirurgia Geral (RQE 48.711), em Belo Horizonte. Consultório: Rua Ceará, 195, Santa Efigênia. Telefone e WhatsApp (31) 3241-4277 | Telefone (31) 3241-1919.
 
 **Situação atual: versão de revisão.** O site está bloqueado para o Google (noindex) e mostra o botão "Pendências para publicação". Serve para o Dr. Jander visualizar e sugerir ajustes antes da publicação definitiva.
 
@@ -83,10 +83,9 @@ A partir daí, toda alteração enviada ao GitHub é publicada automaticamente n
 
 | O que | Onde | Como |
 |---|---|---|
-| Número do WhatsApp | `assets/js/principal.js` | Preencher `var WHATSAPP = "";` com DDI e DDD, só números. Ex.: `"5531999999999"`. Vale para todos os botões. |
-| Telefone | `index.html` | Substituir `[TELEFONE]` (inclusive nos links `tel:[TELEFONE]`, sem espaços nem traços: `tel:+553132414277`). |
-| E-mail, convênios, horários, hospitais | `index.html` | Procurar os marcadores entre colchetes, como `[E-MAIL]`, `[CONVÊNIOS DESTE LOCAL]` e `[HORÁRIOS]`, e substituir pelo texto final. |
-| RQE de Cirurgia do Aparelho Digestivo | `index.html` | Procurar `A CONFIRMAR` (6 ocorrências) e trocar o bloco `<span class="pendente">...</span>` pelo número do RQE. |
+| Número do WhatsApp | `assets/js/principal.js` | `var WHATSAPP = "553132414277";` (DDI + DDD + número, só dígitos). Vale para todos os botões. |
+| Telefones | `index.html` | (31) 3241-4277 (telefone e WhatsApp) e (31) 3241-1919 (somente telefone), nos links `tel:+553132414277` e `tel:+553132411919`. |
+| Convênios, horários, hospitais | `index.html` | Procurar os marcadores entre colchetes, como `[CONVÊNIOS]`, `[HORÁRIOS]` e `[HOSPITAIS A CONFIRMAR]`, e substituir pelo texto final. |
 | Retrato e foto no consultório | `index.html` | Salvar as fotos em `assets/img/` e trocar cada bloco `<div class="vazio">...</div>` por `<img src="assets/img/NOME.jpg" alt="...">`. Fotos verticais 4:5, mínimo 1200 x 1500 px, em JPG ou WebP com até 300 KB. |
 | Botão de pendências | `assets/js/principal.js` | `var REVISAO = true;` mostra o botão. Trocar para `false` na publicação. |
 
@@ -95,18 +94,17 @@ A partir daí, toda alteração enviada ao GitHub é publicada automaticamente n
 ## 4. Checklist para a publicação definitiva
 
 **Conteúdo e conformidade (Resolução CFM nº 2.336/2023)**
-- [ ] RQE de Cirurgia do Aparelho Digestivo registrado no CRM-MG e inserido. Sem ele, a especialidade sai do site.
-- [ ] Ano e instituição da residência em Cirurgia do Aparelho Digestivo.
+- [ ] Especialidade divulgada: somente Cirurgia Geral (RQE 48.711). A cirurgia oncológica do aparelho digestivo aparece como área de prática, sem a palavra especialista e sem termos como "referência" ou "expert" (Art. 11 e 13).
+- [ ] Textos da seção de cirurgia oncológica validados pelo Dr. Jander.
 - [ ] Sociedades médicas com vigência confirmada (CBC, SOBRACIL, SBCBM).
 - [ ] Cursos: se algum for pós-graduação lato sensu, incluir o termo NÃO ESPECIALISTA.
 - [ ] Textos dos painéis de condições e orientações validados pelo Dr. Jander.
 - [ ] Hospitais onde opera: somente vínculos atuais, sem logotipos.
 - [ ] Nenhum superlativo, promessa de resultado, depoimento, antes e depois ou número de avaliações.
 
-**Dados de contato e locais**
-- [ ] WhatsApp, telefone e e-mail.
-- [ ] Convênios e horários de cada consultório.
-- [ ] Posição dos pinos no mapa conferida (`assets/js/mapa-dados.js`, campo `consultorios`).
+**Dados de contato e local**
+- [ ] Convênios e horários do consultório.
+- [ ] Posição do pino no mapa conferida (`assets/js/mapa-dados.js`, campo `consultorios`).
 
 **Técnico**
 - [ ] `var REVISAO = false;` em `assets/js/principal.js`.

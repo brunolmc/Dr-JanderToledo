@@ -2,7 +2,7 @@
 (function(){
   "use strict";
   /* Preencher com o número confirmado (somente dígitos, com DDI e DDD), ex.: "5531999999999" */
-  var WHATSAPP = "";
+  var WHATSAPP = "553132414277";
   var MSG = "Olá, gostaria de agendar uma consulta com o Dr. Jander Toledo.";
   var WA_URL = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(MSG);
   function ligarWhats(raiz){
@@ -71,7 +71,7 @@
     acoes.innerHTML = '<a class="btn btn-acao" href="#" data-whats data-track="whatsapp_painel_' + id + '">Agendar consulta</a><button class="btn btn-linha" type="button" data-fechar-painel>Voltar ao site</button>';
     pConteudo.appendChild(acoes);
     var ass = document.createElement("p"); ass.className = "assina-painel";
-    ass.textContent = "Autoria e revisão médica: Dr. Jander Toledo Ferreira | MÉDICO | CRM-MG 19.515 | Cirurgia Geral RQE 48.711 | Cirurgia do Aparelho Digestivo RQE [A CONFIRMAR]";
+    ass.textContent = "Autoria e revisão médica: Dr. Jander Toledo Ferreira | MÉDICO | CRM-MG 19.515 | Cirurgia Geral | RQE 48.711";
     if (id === "pendencias"){ acoes.remove(); ass.remove(); aviso.remove(); }
     pConteudo.appendChild(ass);
     ligarWhats(pConteudo);
@@ -189,7 +189,7 @@
     mapa.on("zoomend", camadasPorZoom);
 
     D.consultorios.forEach(function(c, i){
-      var m = L.marker([c.lat, c.lon], {zIndexOffset:1000, title:c.nome, icon:L.divIcon({className:"", iconSize:[40,40], iconAnchor:[20,46], popupAnchor:[0,-44], tooltipAnchor:[0,-50], html:'<div class="pino-cons"><span>' + (i + 1) + '</span></div>'})});
+      var m = L.marker([c.lat, c.lon], {zIndexOffset:1000, title:c.nome, icon:L.divIcon({className:"", iconSize:[40,40], iconAnchor:[20,46], popupAnchor:[0,-44], tooltipAnchor:[0,-50], html:'<div class="pino-cons"><span class="pc-dot"></span></div>'})});
       m.bindTooltip(c.nome, {permanent:true, direction:"top", className:"rotulo-cons", offset:[0,0]});
       m.bindPopup("<b>" + c.nome + "</b><br>" + c.endereco + "<br><a href='" + c.rota + "' target='_blank' rel='noopener' style='color:#1F4842;font-weight:600'>Como chegar</a>");
       m.on("click", function(){ destacaLocal(i); });
@@ -201,7 +201,7 @@
       options:{position:"topright"},
       onAdd:function(){
         var div = L.DomUtil.create("div","leaflet-bar");
-        div.innerHTML = '<button class="btn-centralizar" type="button" title="Ver os dois consultórios" aria-label="Ver os dois consultórios"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/><circle cx="12" cy="12" r="8"/></svg></button>';
+        div.innerHTML = '<button class="btn-centralizar" type="button" title="Centralizar no consultório" aria-label="Centralizar no consultório"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/><circle cx="12" cy="12" r="8"/></svg></button>';
         L.DomEvent.disableClickPropagation(div);
         div.querySelector("button").addEventListener("click", vistaInicial);
         return div;
