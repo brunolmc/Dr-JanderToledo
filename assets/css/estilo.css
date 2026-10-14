@@ -207,24 +207,27 @@ nav.menu a:hover::after,nav.menu a.ativo::after{transform:scaleX(1)}
 .nota-secao{margin-top:22px;display:flex;gap:12px;align-items:flex-start;color:var(--grafite-verde)}
 .nota-secao svg{width:22px;height:22px;flex:none;color:var(--salvia);margin-top:3px}
 
-/* Oncologia */
-.oncologia{background:var(--verde-serra);color:var(--pedra-clara)}
-.oncologia .rotulo{color:var(--texto-sobre-escuro)}
-.oncologia .rotulo::before{background:var(--salvia)}
-.grade-onc{display:grid;gap:clamp(36px,5vw,80px);align-items:center}
+/* Oncologia (bloco de destaque dentro de "O que eu trato") */
+.onc-destaque{background:var(--verde-serra);color:var(--pedra-clara);border-radius:var(--raio-lg);padding:clamp(28px,4vw,56px);margin-bottom:clamp(40px,5vw,64px)}
+.onc-destaque .rotulo{color:var(--texto-sobre-escuro)}
+.onc-destaque .rotulo::before{background:var(--salvia)}
+.grade-onc{display:grid;gap:clamp(32px,4vw,64px);align-items:center}
 @media (min-width:1000px){.grade-onc{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
-.onc-texto{display:grid;gap:18px}
-.onc-texto h2{color:var(--pedra-clara);max-width:20ch}
+.onc-texto{display:grid;gap:16px}
+.onc-titulo{font-family:var(--serif);font-weight:500;font-size:clamp(24px,2.4vw,32px);line-height:1.22;color:var(--pedra-clara);max-width:22ch;text-wrap:balance}
 .onc-texto p{color:var(--texto-sobre-escuro);max-width:36em}
 .onc-texto .botoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
 @media (max-width:520px){.onc-texto .botoes .btn{width:100%}}
 .onc-lista{list-style:none;margin:0;padding:0;display:grid}
-.onc-lista li{display:grid;grid-template-columns:64px minmax(0,1fr);gap:20px;align-items:start;padding:24px 0;border-top:1px solid rgba(201,214,207,.22)}
+.onc-lista li{display:grid;grid-template-columns:60px minmax(0,1fr);gap:18px;align-items:start;padding:22px 0;border-top:1px solid rgba(201,214,207,.22)}
 .onc-lista li:last-child{border-bottom:1px solid rgba(201,214,207,.22)}
-.onc-ic{width:64px;height:64px;border-radius:50%;background:rgba(242,237,230,.1);display:grid;place-items:center;color:var(--pedra-clara)}
-.onc-ic svg{width:44px;height:44px}
-.onc-lista h3{color:var(--pedra-clara);margin-bottom:6px}
-.onc-lista p{color:var(--texto-sobre-escuro);font-size:.95em}
+.onc-ic{width:60px;height:60px;border-radius:50%;background:rgba(242,237,230,.1);display:grid;place-items:center;color:var(--pedra-clara)}
+.onc-ic svg{width:40px;height:40px}
+.onc-lista h4{font-family:var(--serif);font-weight:500;font-size:clamp(19px,1.6vw,21px);color:var(--pedra-clara);margin:0 0 4px}
+.onc-lista p{color:var(--texto-sobre-escuro);font-size:.94em;margin:0}
+.sub-cabeca{display:grid;gap:6px;margin-bottom:24px}
+.sub-cabeca h3{font-size:clamp(21px,2vw,26px)}
+.sub-cabeca p{color:var(--grafite-verde)}
 
 /* Como funciona */
 .trilha{display:none}
